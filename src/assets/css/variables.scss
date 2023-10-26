@@ -1,0 +1,16 @@
+$primary-color: #ff9854;
+$line-color: #faf8f9;
+$theme-linear-gradient: linear-gradient(90deg, #fa8c1d, #fcaf3f);
+
+/* 全局修改: 任何地方只要用到-van-tabbar-item-icon-size都会被修改掉 */
+/* --van-tabbar-item-icon-size: 30px !important; */
+:root {
+  --primary-color: #ff9854;
+  --line-color: #faf8f9;
+  --theme-linear-gradient: linear-gradient(90deg, #fa8c1d, #fcaf3f);
+  --van-nav-bar-title-text-color: var($primary-color) !important;
+  /* 全局修改: 修改search样式 */
+  --van-primary-color: var(--primary-color) !important;
+  --van-back-top-background: var(--primary-color) !important;
+  --van-search-left-icon-color: var(--primary-color) !important;
+}
