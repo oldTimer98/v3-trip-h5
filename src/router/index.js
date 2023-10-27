@@ -24,6 +24,14 @@ const routes = [
     name: "order",
     component: () => import("@/views/order/index.vue"),
   },
+  {
+    path: "/city",
+    name: "city",
+    component: () => import("@/views/city/index.vue"),
+    meta: {
+      hideTabBar: true,
+    },
+  },
 ]
 const router = createRouter({
   history: createWebHashHistory(),

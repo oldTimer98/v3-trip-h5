@@ -4,15 +4,13 @@
     <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view></router-view>
 
-    <tab-bar />
-    <router-link to="/home">home</router-link>
-    <router-link to="/favor">favor</router-link>
-    <router-link to="/message">message</router-link>
-    <router-link to="/order">order</router-link>
+    <tab-bar v-if="!route.meta?.hideTabBar" />
   </div>
 </template>
 <script setup>
 import TabBar from "@/components/tab-bar/TabBar.vue"
+import { useRoute } from "vue-router"
+const route = useRoute()
 </script>
 
 <style scoped></style>
