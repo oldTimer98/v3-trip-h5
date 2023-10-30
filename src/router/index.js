@@ -32,6 +32,14 @@ const routes = [
       hideTabBar: true,
     },
   },
+  {
+    path: "/search",
+    name: "search",
+    component: () => import("@/views/search/index.vue"),
+    meta: {
+      hideTabBar: true,
+    },
+  },
 ]
 const router = createRouter({
   history: createWebHashHistory(),

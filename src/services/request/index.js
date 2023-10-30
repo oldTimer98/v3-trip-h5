@@ -1,6 +1,7 @@
 import axios from "axios"
 import { config } from "./config"
-
+import { useMainStore } from "@/store/modules/main"
+const mainStore = useMainStore()
 class yzzRequest {
   constructor(baseURL, timeout = 10000) {
     this.instance = axios.create({
@@ -9,6 +10,7 @@ class yzzRequest {
     })
     this.instance.interceptors.request.use(
       config => {
+        mainStore.isLoading = true
         return config
       },
       err => {
@@ -17,9 +19,11 @@ class yzzRequest {
     )
     this.instance.interceptors.response.use(
       res => {
+        mainStore.isLoading = false
         return res.data
       },
       err => {
+        mainStore.isLoading = false
         return err
       }
     )

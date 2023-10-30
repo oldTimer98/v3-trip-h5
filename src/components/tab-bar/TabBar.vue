@@ -16,17 +16,18 @@
 </template>
 
 <script setup>
-import { reactive, ref, watch } from "vue"
+import { ref, watch } from "vue"
 import { TabBarData } from "@/assets/data/tabbar.js"
 import { getAssetsFile } from "@/utils"
 import { useRoute } from "vue-router"
 const currentIndex = ref(0)
 const route = useRoute()
 // 监听路由改变时, 找到对应的索引, 设置currentIndex
-// watch(route, newRoute => {
-//   const index = TabBarData.findIndex(item => item.path === newRoute.path)
-//   currentIndex.value = index
-// })
+watch(route, newRoute => {
+  const index = TabBarData.findIndex(item => item.path === newRoute.path)
+  if (index === -1) return
+  currentIndex.value = index
+})
 </script>
 
 <style lang="scss" scoped>
