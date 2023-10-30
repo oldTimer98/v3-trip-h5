@@ -7,7 +7,7 @@
       <div class="img-cover"></div>
       <div class="info">
         <div class="location">
-          <img src="@/assets/img/home/loading.png" alt="" />
+          <img src="@/assets/img/home/location.png" alt="" />
           <span>{{ itemData.location }}</span>
         </div>
         <div class="name">{{ itemData.houseName }}</div>
