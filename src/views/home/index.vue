@@ -51,11 +51,11 @@ const isShowSearchBar = computed(() => {
   return scrollTop.value >= 360
 })
 
-// onActivated(() => {
-//   homeRef.value?.scrollTo({
-//     top: scrollTop.value,
-//   })
-// })
+onActivated(() => {
+  homeRef.value?.scrollTo({
+    top: scrollTop.value,
+  })
+})
 </script>
 
 <style lang="scss" scoped>

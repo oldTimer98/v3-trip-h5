@@ -6,7 +6,7 @@ export const useCityStore = defineStore("city", {
     return {
       allCities: {},
       currentCity: {
-        cityName: "加载中...",
+        cityName: "请选择城市",
       },
     }
   },

@@ -9,9 +9,15 @@ export function useScroll(elRef) {
   let scrollHeight = ref(0)
 
   const scrollHandler = throttle(() => {
-    scrollTop.value = elRef ? elRef.value.scrollTop : document.documentElement.scrollTop
-    clientHeight.value = elRef ? elRef.value.clientHeight : document.documentElement.clientHeight
-    scrollHeight.value = elRef ? elRef.value.scrollHeight : document.documentElement.scrollHeight
+    if (elRef) {
+      scrollTop.value = elRef.value.scrollTop
+      clientHeight.value = elRef.value.clientHeight
+      scrollHeight.value = elRef.value.scrollHeight
+    } else {
+      scrollTop.value = document.documentElement.scrollTop
+      clientHeight.value = document.documentElement.clientHeight
+      scrollHeight.value = document.documentElement.scrollHeight
+    }
     if (scrollTop.value + clientHeight.value >= scrollHeight.value) {
       console.log(scrollTop.value, clientHeight.value, scrollHeight.value)
       isReachBottom.value = true

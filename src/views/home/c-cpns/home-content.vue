@@ -27,11 +27,12 @@ const itemClick = item => {
 
 <style lang="scss" scoped>
 .content {
-  padding: 10px 8px;
+  padding: 0px 8px;
 
   .title {
     font-size: 22px;
     padding: 10px;
+    margin: 0;
   }
 
   .list {
