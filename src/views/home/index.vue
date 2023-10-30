@@ -28,7 +28,8 @@ import { useScroll } from "@/hooks/useScroll"
 const homeStore = useHomeStore()
 homeStore.fetchCategoriesData()
 homeStore.fetchHotSuggestData()
-const cityStore = useCityStore()
+homeStore.fetchHouseListData()
+// const cityStore = useCityStore()
 // cityStore.fetchCurrentCityData()
 //监听滚动消息
 const homeRef = ref()

@@ -18,8 +18,8 @@ export function useScroll(elRef) {
       clientHeight.value = document.documentElement.clientHeight
       scrollHeight.value = document.documentElement.scrollHeight
     }
-    if (scrollTop.value + clientHeight.value >= scrollHeight.value) {
-      console.log(scrollTop.value, clientHeight.value, scrollHeight.value)
+    console.log(scrollTop.value, clientHeight.value, scrollHeight.value)
+    if (Math.ceil(scrollTop.value + clientHeight.value) >= scrollHeight.value) {
       isReachBottom.value = true
     }
   }, 100)
