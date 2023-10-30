@@ -29,7 +29,7 @@ const homeStore = useHomeStore()
 homeStore.fetchCategoriesData()
 homeStore.fetchHotSuggestData()
 const cityStore = useCityStore()
-cityStore.fetchCurrentCityData()
+// cityStore.fetchCurrentCityData()
 //监听滚动消息
 const homeRef = ref()
 const { isReachBottom, scrollTop } = useScroll(homeRef)
