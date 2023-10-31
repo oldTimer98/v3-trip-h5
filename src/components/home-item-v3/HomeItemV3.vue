@@ -62,7 +62,7 @@ const props = defineProps({
       background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 3%, rgba(41, 40, 40, 0.9) 100%);
     }
     .info {
-      padding: 5px 10px;
+      padding: 6px 10px;
       color: #666;
       font-size: 12px;
     }
