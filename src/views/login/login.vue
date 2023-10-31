@@ -15,7 +15,7 @@
           v-model="userAccount"
           name="用户名"
           label="用户名"
-          placeholder="用户名"
+          placeholder="请输入用户名"
           autocomplete
           :rules="[{ required: true, message: '请填写用户名' }]"
         />
@@ -25,7 +25,7 @@
           type="password"
           name="密码"
           label="密码"
-          placeholder="密码"
+          placeholder="请输入密码"
           right-icon="browsing-history"
           @click-right-icon="showPassword"
           clearable
@@ -33,9 +33,9 @@
         />
       </van-cell-group>
       <div id="login">
-        <van-button plain class="defaultLogin" native-type="submit" round type="primary">
-          <van-icon name="lock" />
-          账号密码登录
+        <van-button class="defaultLogin" native-type="submit" round type="primary">
+          <van-icon />
+          登录
         </van-button>
       </div>
     </van-form>
@@ -120,5 +120,6 @@ const gotoRegister = () => {
   color: gray;
   float: right;
   margin-top: 10px;
+  margin-right: 8px;
 }
 </style>

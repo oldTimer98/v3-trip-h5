@@ -16,14 +16,14 @@
           :rules="[{ required: true, message: '请填写账号!' }]"
           label="账号"
           name="账号"
-          placeholder="账号"
+          placeholder="请输入账号"
         />
         <van-field
           v-model="password"
           :rules="[{ required: true, message: '请填写密码!' }]"
           label="密码"
           name="密码"
-          placeholder="密码"
+          placeholder="请输入密码"
           type="password"
           right-icon="browsing-history"
           @click-right-icon="showPassword"
@@ -34,7 +34,7 @@
           :rules="[{ required: true, message: '请确认密码!' }]"
           label="确认密码"
           name="确认密码"
-          placeholder="确认密码"
+          placeholder="请再次输入密码"
           type="password"
           right-icon="browsing-history"
           @click-right-icon="showPassword"
@@ -43,9 +43,9 @@
       </van-cell-group>
 
       <div id="register">
-        <van-button plain class="defaultLogin" native-type="submit" round type="primary">
-          <van-icon name="lock" />
-          账号密码注册
+        <van-button class="defaultLogin" native-type="submit" round type="primary">
+          <van-icon />
+          注册
         </van-button>
       </div>
     </van-form>
@@ -116,5 +116,6 @@ const gotoLogin = () => {
   color: gray;
   float: right;
   margin-top: 10px;
+  margin-right: 8px;
 }
 </style>
