@@ -97,7 +97,7 @@ const routes = [
   },
   {
     path: "/:pathMatch(.*)",
-    component: () => import("@/views/notFound/notFound.vue"),
+    component: () => import("@/views/notFound/index.vue"),
     meta: {
       hideTabBar: true,
       title: "404",
