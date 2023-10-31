@@ -48,8 +48,8 @@
           账号密码注册
         </van-button>
       </div>
-      <van-cell title="" to="/login" value="已有账号？点击登录"></van-cell>
     </van-form>
+    <span class="login" @click="gotoLogin">已有账号？点击登录</span>
   </div>
 </template>
 <script setup name="register">
@@ -81,6 +81,9 @@ const showPassword = el => {
   const passwordRef = el.target.offsetParent.childNodes[1].childNodes[0]
   passwordRef.type = passwordRef.type === "text" ? "password" : "text"
 }
+const gotoLogin = () => {
+  router.push("/login")
+}
 </script>
 
 <style scoped lang="scss">
@@ -108,5 +111,10 @@ const showPassword = el => {
     min-width: 140px;
     margin-right: 10px;
   }
+}
+.login {
+  color: gray;
+  float: right;
+  margin-top: 10px;
 }
 </style>

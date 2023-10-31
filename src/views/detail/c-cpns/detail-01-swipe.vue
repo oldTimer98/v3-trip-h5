@@ -24,7 +24,6 @@
       :images="images"
       @change="showPreviewChange"
       :start-position="currentIndex"
-      show-indicators
     >
       <template v-slot:index>第{{ currentIndex + 1 }}页</template>
     </van-image-preview>
@@ -33,7 +32,7 @@
 
 <script setup>
 import { showImagePreview } from "vant"
-import { ref,computed } from "vue"
+import { ref, computed } from "vue"
 const props = defineProps({
   swipeData: {
     type: Array,

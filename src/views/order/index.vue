@@ -12,7 +12,7 @@
       >
         <van-card
           :num="item.cityTerritoryType"
-          :price="item.prepayAmount"
+          :price="item.prepayAmount+'.00'"
           :desc="item.hotelName"
           :title="item.unitName"
           :thumb="item.unitPicture"
@@ -73,6 +73,7 @@ const beforeClose = ({ position }) => {
 
 .order-content {
   margin-top: 10px;
+  height: 100vh;
 }
 
 .order-item {

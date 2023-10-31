@@ -7,7 +7,7 @@
           v-model="currentValue"
           is-link
           readonly
-          label="性别"
+          label="性别："
           placeholder="选择性别"
           @click="showPicker = true"
         />
@@ -88,7 +88,6 @@ const onClickLeft = () => {
 <style scoped lang="scss">
 .edit {
   display: flex;
-  justify-content: center;
   align-items: flex-start;
   height: 100vh;
   padding-top: 20px;

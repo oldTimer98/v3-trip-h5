@@ -92,7 +92,7 @@ const { startDate, endDate } = storeToRefs(mainStore)
 const startDateStr = computed(() => formatMonthDay(startDate.value))
 const endDateStr = computed(() => formatMonthDay(endDate.value))
 const showCalendar = ref(false)
-const stayCount = ref(getDiffDay(endDate.value, startDate.value))
+const stayCount = computed(() => getDiffDay(endDate.value, startDate.value))
 const onConfirm = value => {
   mainStore.startDate = value[0]
   mainStore.endDate = value[1]
@@ -115,14 +115,14 @@ const hotSuggestsClick = hotCity => {
 }
 // 开始搜索
 const searchBtnClick = () => {
-  router.push({
-    path: "/search",
-    query: {
-      startDate: startDateStr.value,
-      endDate: endDateStr.value,
-      currentCity: currentCity.value.cityName,
-    },
-  })
+  // router.push({
+  //   path: "/search",
+  //   query: {
+  //     startDate: startDateStr.value,
+  //     endDate: endDateStr.value,
+  //     currentCity: currentCity.value.cityName,
+  //   },
+  // })
 }
 </script>
 

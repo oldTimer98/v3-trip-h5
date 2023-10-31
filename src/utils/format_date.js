@@ -5,5 +5,6 @@ export function formatMonthDay(date, formatStr = "MM月DD日") {
 }
 
 export function getDiffDay(startDate, endDate) {
-  return dayjs(startDate).diff(endDate, "day")
+  const days =  dayjs(endDate).diff(startDate, "day")
+  return Math.abs(days)
 }
