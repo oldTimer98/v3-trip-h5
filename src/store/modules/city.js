@@ -15,9 +15,13 @@ export const useCityStore = defineStore("city", {
       const res = await getCityAll()
       this.allCities = res.data
     },
-    async fetchCurrentCityData(){
-      const res = await getCurrentCity()
-      console.log(res);
-    }
+    async fetchCurrentCityData() {
+      const {
+        data: {
+          ipData: { city, region, country },
+        },
+      } = await getCurrentCity()
+      this.currentCity.cityName = city || region || country
+    },
   },
 })
