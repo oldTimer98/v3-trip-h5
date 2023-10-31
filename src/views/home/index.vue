@@ -13,7 +13,8 @@
   </div>
 </template>
 
-<script setup>
+<script setup name="home">
+// 注释
 import HomeSearchBox from "@/views/home/c-cpns/home-search-box.vue"
 import HomeCategories from "@/views/home/c-cpns/home-categories.vue"
 import HomeContent from "@/views/home/c-cpns/home-content.vue"

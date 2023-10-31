@@ -2,6 +2,8 @@
   <div>favor</div>
 </template>
 
-<script setup></script>
+<script setup name="favor">
+//
+</script>
 
 <style lang="scss" scoped></style>

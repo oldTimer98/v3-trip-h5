@@ -2,6 +2,8 @@
   <div>order</div>
 </template>
 
-<script setup></script>
+<script setup name="order">
+//
+</script>
 
 <style lang="scss" scoped></style>

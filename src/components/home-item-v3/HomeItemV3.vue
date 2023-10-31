@@ -25,7 +25,6 @@
 </template>
 
 <script setup>
-import { defineProps } from "vue"
 const props = defineProps({
   itemData: {
     type: Object,
