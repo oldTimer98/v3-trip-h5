@@ -18,18 +18,6 @@
 5. 修改 index.html => title
 6. css 样式重置(normalize.css && reset.css)
 
-## git 提交远程仓库
-
-```cmd
-git init #提交改变到缓存
-
-git commit -m 'description' #本地 git 仓库关联 GitHub 仓库
-
-git remote add origin https://gitee.com/shihangbin/vue-trip.git
-
-git push -u origin master
-```
-
 ## 目录结构
 
 - assets => img/css/font/audio/video
