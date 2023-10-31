@@ -2,7 +2,7 @@
   <div class="swipe">
     <van-swipe class="swipe-list" :autoplay="3000" indicator-color="white">
       <template v-for="item in swipeData" ::key="item.url">
-        <van-swipe-item class="item">
+        <van-swipe-item class="item" @click="clickPicItem(item)">
           <img :src="item.url" />
         </van-swipe-item>
       </template>
@@ -19,10 +19,21 @@
         </div>
       </template>
     </van-swipe>
+    <van-image-preview
+      v-model:show="showPreview"
+      :images="images"
+      @change="showPreviewChange"
+      :start-position="currentIndex"
+      show-indicators
+    >
+      <template v-slot:index>第{{ currentIndex + 1 }}页</template>
+    </van-image-preview>
   </div>
 </template>
 
 <script setup>
+import { showImagePreview } from "vant"
+import { ref,computed } from "vue"
 const props = defineProps({
   swipeData: {
     type: Array,
@@ -58,9 +69,23 @@ const getName = name => {
   const results = nameReg.exec(name)
   return results[1]
 }
+
 const getCategoryIndex = item => {
   const valueArr = swipeGroup[item.enumPictureCategory]
   return valueArr.findIndex(data => data === item) + 1
+}
+
+const images = props.swipeData.map(i => i.url)
+const showPreview = ref(false)
+const currentIndex = ref(0)
+// 查看图片
+const clickPicItem = item => {
+  const index = props.swipeData.findIndex(i => i === item)
+  currentIndex.value = index
+  showPreview.value = true
+}
+const showPreviewChange = newIndex => {
+  currentIndex.value = newIndex
 }
 </script>
 
